@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Welcome');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,7 +31,37 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/welcome', 'Welcome::index');
+$routes->get('/welcome/login', 'Welcome::login');
+$routes->get('/welcome/cekLogin', 'Welcome::cekLogin');
+$routes->get('/welcome/logout', 'Welcome::logout');
+
+$routes->get('/dashboard', 'Dashboard::index');
+$routes->get('/dashboard/aboutUs', 'Dashboard::aboutUs');
+
+$routes->get('/dokter', 'Dokter::index');
+$routes->get('/dokter/save', 'Dokter::index');
+$routes->get('/dokter/create', 'Dokter::create');
+$routes->get('/dokter/edit/(:any)', 'Dokter::edit/$1');
+$routes->post('dokter/update/(:any)', 'Dokter::update/$1');
+$routes->delete('dokter/(:any)', 'Dokter::delete/$1');
+
+$routes->get('/rawatinap', 'Rawatinap::index');
+$routes->get('/rawatinap/view', 'Rawatinap::view');
+$routes->get('/rawatinap/simpan', 'Rawatinap::simpan');
+$routes->get('/rawatinap/detail/(:any)', 'Rawatinap::detail/$1');
+$routes->get('/rawatinap/cetak/(:any)', 'Rawatinap::cetak/$1');
+
+$routes->get('/pasien', 'Pasien::index');
+$routes->get('/pasien/edit/(:any)', 'Pasien::edit/$1');
+$routes->post('pasien/update/(:any)', 'Pasien::update/$1');
+$routes->delete('pasien/(:any)', 'Pasien::delete/$1');
+
+$routes->get('/ruangan', 'Ruangan::index');
+$routes->get('/ruangan/edit/(:any)', 'Ruangan::edit/$1');
+$routes->post('ruangan/update/(:any)', 'Ruangan::update/$1');
+$routes->delete('ruangan/(:any)', 'Ruangan::delete/$1');
+
 
 /*
  * --------------------------------------------------------------------
