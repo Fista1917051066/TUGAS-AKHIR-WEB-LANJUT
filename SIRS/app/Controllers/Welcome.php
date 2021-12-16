@@ -25,8 +25,11 @@ class Welcome extends BaseController
             exit;
         }
         
-        else {
-            echo view('/layout/login');
+         else {
+            session()->setFlashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<strong>Username atau Password Salah!</strong>
+			</div>');
+			return redirect()->to(base_url('welcome/login'));
         }
     }
 
