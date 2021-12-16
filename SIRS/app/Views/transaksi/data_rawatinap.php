@@ -34,9 +34,10 @@
                                 <th>ID Rawat Inap</th>
                                 <th>Nama Pasien</th>
                                 <th>Aksi</th>
-                            </tr>
+                            </tr>         
                         </thead>
-                        <tbody>
+
+                                                <tbody>
                             <?php foreach($rawatinap as $r => $rawatinap) : ?>
                                 <tr>
                                     <td scope="row"><?= $r + 1; ?></td>
@@ -52,6 +53,7 @@
                                 </tr>
                             <?php endforeach ;?>
                         </tbody>
+                        
                     </p>
                 </table>
         </div>
