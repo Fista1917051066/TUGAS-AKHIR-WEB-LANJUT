@@ -173,7 +173,7 @@ class Pasien extends BaseController
 	}
 
 	public function delete($id_pasien) {
-		$this->dokter->delete($id_pasien);
+		$this->pasien->delete($id_pasien);
 		session()->setFlashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
 		<strong>Data berhasil dihapus!</strong>
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
