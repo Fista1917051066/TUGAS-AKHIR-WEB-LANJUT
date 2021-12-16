@@ -17,11 +17,13 @@
                             <div class="form-group">
                                 <label for="kode_ruangan">No Ruangan</label>
                                 <input type="text" class="form-control" id="kode_ruangan" name="kode_ruangan" value="<?= $ruangan['kode_ruangan'];?>" autofocus required>         
+                                
                             </div>
 
                             <div class="form-group">
                                 <label for="nama_ruangan">Nama Ruangan</label>
                                 <input type="text" class="form-control" id="nama_ruangan" name="nama_ruangan" value="<?= $ruangan['nama_ruangan'];?>" required>         
+                                
                             </div>
 
                             <div class="form-group">
