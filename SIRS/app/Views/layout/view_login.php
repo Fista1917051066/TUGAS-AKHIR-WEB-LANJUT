@@ -20,6 +20,8 @@
                 </div>
 
                 <h2>Halaman Login</h2>
+                <?php echo (session()->getFlashdata('pesan')) ?>
+                <br>
                 <div class="box-login">
                     <i class="fas fa-user"></i>
                     <input type="text" name="username" placeholder="Username">
